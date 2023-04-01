@@ -1,11 +1,12 @@
 #grid-container{
-    height: 979px;
-    width: 980px;
      border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
 }
+.change{
+    background:black;
 
+}
 
 
 .cell 
