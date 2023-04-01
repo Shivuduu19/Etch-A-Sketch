@@ -10,7 +10,9 @@
 
 .cell 
 {
-      
+    height: 60px;
+    width: 60px;
+    margin: 0%;  
     border-right: 1px solid black ;
     border-bottom: 1px solid black;
 }
