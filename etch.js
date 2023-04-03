@@ -1,5 +1,7 @@
 const gridContainer = document.querySelector("#grid-container");
-createGrid(16);
+let x = prompt("enter numner of squares per side");
+
+createGrid(x);
 
 function createGrid(x){
   for(i=0;i<x;i++){
@@ -8,10 +10,10 @@ function createGrid(x){
      const divs =document.createElement('div');
      gridContainer.appendChild(divs);
      divs.classList.add("cell");
-     let height=x*60+1.5*x;
-     let width =x*60+1.5*x;
-     gridContainer.style.width=`${width}px`;
-     gridContainer.style.height=`${height}px`;
+     let height=960/x;
+     let width =960/x;
+     divs.style.width=`${width}px`;
+     divs.style.height=`${height}px`;
      divs.addEventListener("mouseover",function(e)
      {
       e.target.classList.add("change");

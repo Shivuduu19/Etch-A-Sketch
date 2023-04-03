@@ -9,7 +9,8 @@ body{
  border: 1px solid blue;
     display: flex;
     flex-wrap: wrap;
-    padding-right: 0;
+    height: 960px;
+    width: 960px;
 }
 .change{
     background:green;
@@ -20,9 +21,8 @@ body{
 .cell 
 {   margin: 0%;
     padding: 0%;
-    height: 60px;
-    width: 60px; 
-    border-right: 1px solid red ;
-    border-bottom: 1px solid yellow;
+    //border-right: 1px solid red ;
+    //border-bottom: 1px solid yellow;
     //flex: auto;
+    //flex: auto; 
 }
