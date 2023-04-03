@@ -8,10 +8,10 @@ function createGrid(x){
      const divs =document.createElement('div');
      gridContainer.appendChild(divs);
      divs.classList.add("cell");
-     let height=x*60+x+5;
-     let width =x*60+x+5;
-     gridContainer.style.width=`${height}px`;
-     gridContainer.style.height=`${width}px`;
+     let height=x*60+1.5*x;
+     let width =x*60+1.5*x;
+     gridContainer.style.width=`${width}px`;
+     gridContainer.style.height=`${height}px`;
      divs.addEventListener("mouseover",function(e)
      {
       e.target.classList.add("change");

@@ -1,19 +1,28 @@
+body{
+    padding: 0;
+}
+
+
+
+
 #grid-container{
-     border: 1px solid red;
+ border: 1px solid blue;
     display: flex;
     flex-wrap: wrap;
+    padding-right: 0;
 }
 .change{
-    background:black;
+    background:green;
 
 }
 
 
 .cell 
-{
+{   margin: 0%;
+    padding: 0%;
     height: 60px;
-    width: 60px;
-    margin: 0%;  
-    border-right: 1px solid black ;
-    border-bottom: 1px solid black;
+    width: 60px; 
+    border-right: 1px solid red ;
+    border-bottom: 1px solid yellow;
+    //flex: auto;
 }
