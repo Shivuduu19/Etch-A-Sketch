@@ -19,10 +19,9 @@ body{
 
 
 .cell 
-{   margin: 0%;
-    padding: 0%;
-    border-right: 1px solid red ;
-    border-bottom: 1px solid yellow;
-    //flex: auto;
-    //flex: auto; 
+{   margin: 0;
+    padding: 0;
+  //  border-right: 1px solid red ;
+   // border-bottom: 1px solid yellow;
+ 
 }

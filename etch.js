@@ -1,23 +1,41 @@
 const gridContainer = document.querySelector("#grid-container");
-let x = prompt("enter numner of squares per side");
+const newGrid= document.createElement('button');
+newGrid.innerHTML= "NEW GRID";
+newGrid.addEventListener("click",refreshGrid);
 
-createGrid(x);
 
-function createGrid(x){
-  for(i=0;i<x;i++){
-    for(j=0;j<x;j++)
-    {
-     const divs =document.createElement('div');
-     gridContainer.appendChild(divs);
-     divs.classList.add("cell");
-     let height=960/x-1.5;
-     let width =960/x-1.5;
-     divs.style.width=`${width}px`;
-     divs.style.height=`${height}px`;
-     divs.addEventListener("mouseover",function(e)
-     {
-      e.target.classList.add("change");
-     });
-    }
+function refreshGrid()
+{
+  let size= prompt("enter number of square divs per side");
+  if(size<100){
+  clearGrid();
+  createGrid(size);
+  const newGrid= document.createElement('button');
+   newGrid.innerHTML= "NEW GRID";
+   gridContainer.append(newGrid);
+   newGrid.addEventListener("click",refreshGrid);
+  }else{
+    prompt("your entry is greater than 100.Please enter less than hundread");
   }
+}
+  
+createGrid(16);
+function createGrid(size){
+  for(let i=1;i<=size*size;i++){
+    let cell = document.createElement("div");
+    cell.classList.add("cell");
+    let height = 960/size;
+    let width  = 960/size;
+    cell.style.height=`${height}px`;
+    cell.style.width=`${width}px`;
+    gridContainer.appendChild(cell); 
+    cell.addEventListener("mouseover",function(e)
+    {
+     e.target.classList.add("change");
+    });
+  };
+};
+gridContainer.append(newGrid);
+function clearGrid(){
+  gridContainer.innerHTML='';
 }
